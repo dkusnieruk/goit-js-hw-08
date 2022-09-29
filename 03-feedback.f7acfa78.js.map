@@ -1,0 +1,1 @@
+{"mappings":"YAAA,IAAMA,EAAWC,SAASC,iBAAkB,SAC5CC,QAAQC,IAAIJ,G","sources":["src/js/03-feedback.js"],"sourcesContent":["const getLabel = document.querySelectorAll(`label`);\nconsole.log(getLabel);\n"],"names":["$b00c40859be242c5$var$getLabel","document","querySelectorAll","console","log"],"version":3,"file":"03-feedback.f7acfa78.js.map"}
