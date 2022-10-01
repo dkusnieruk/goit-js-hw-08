@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector("input");document.querySelector("textarea");e.addEventListener("input",(function(e){console.log(e.currentTarget.value),localStorage.setItem("feedback-form-state",e.currentTarget.value)}));var t=document.querySelector("form"),o=localStorage.getItem("feedback-form-state");e.value=e.value+"".concat(o),console.log(o),t.addEventListener("submit",(function(e){localStorage.clear(" ")}))}();
+//# sourceMappingURL=03-feedback.10867efa.js.map
