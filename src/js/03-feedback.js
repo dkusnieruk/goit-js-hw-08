@@ -36,7 +36,7 @@ getForm.addEventListener(`submit`, (event)=>{
     console.log(parsedObject);
     event.preventDefault();
     clearValue();
-    
+    localStorage.clear();
 });
 
 
