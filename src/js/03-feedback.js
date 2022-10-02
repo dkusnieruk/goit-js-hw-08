@@ -14,9 +14,9 @@ function onInput(event){
     localStorage.setItem("feedback-form-state", JSON.stringify(object))
 };
 
-getObject = localStorage.getItem("feedback-form-state");
+const getObject = localStorage.getItem("feedback-form-state");
 console.log(getObject);
-parsedObject = JSON.parse(getObject);
+const parsedObject = JSON.parse(getObject);
 console.log(parsedObject);
 
 function setValue(){
