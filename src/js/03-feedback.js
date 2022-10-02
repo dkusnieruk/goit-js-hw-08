@@ -15,21 +15,22 @@ function onInput(event){
 };
 
 getObject = localStorage.getItem("feedback-form-state");
-
+console.log(getObject);
 parsedObject = JSON.parse(getObject);
+console.log(parsedObject);
 
 function setValue(){
     getInput.value = parsedObject.email;
     getText.value = parsedObject.message;
 };
 
+setValue();
+
+
 function clearValue(){
     getInput.value = "";
     getText.value = "";
 }
-setValue();
-console.log(getObject);
-console.log(parsedObject);
 
 getForm.addEventListener(`submit`, (event)=>{
     console.log(parsedObject);
