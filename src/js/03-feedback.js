@@ -14,7 +14,7 @@ getForm.addEventListener(`input`, throttle(onInput, 500));
 function onInput(event){
     object[event.target.name] = event.target.value;
     localStorage.setItem("feedback-form-state", JSON.stringify(object))
-    // console.log(object);
+    
 };
 
 
