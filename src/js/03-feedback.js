@@ -14,7 +14,7 @@ getForm.addEventListener(`input`, throttle(onInput, 500));
 function onInput(event){
     object[event.target.name] = event.target.value;
     localStorage.setItem("feedback-form-state", JSON.stringify(object))
-    
+    // console.log(object);
 };
 
 
@@ -23,14 +23,20 @@ const getObject = localStorage.getItem("feedback-form-state");
 const parsedObject = JSON.parse(getObject);
 
 function setValue(){
-    if (parsedObject.email.length == 0,
-        parsedObject.message.length == 0){
-        getInput.value = "",
-        getText.value = ""
-    }else {
-    getInput.value = parsedObject.email,
-    getText.value = parsedObject.message
-}};
+    getInput.value = parsedObject.email !== undefined ? getInput.value= parsedObject.email : "";
+    getText.value = parsedObject.message !== undefined ? getText.value= parsedObject.message: "";
+
+    // if (parsedObject.email !== undefined,
+    //     parsedObject.message !==undefined
+    //     ){
+    //     getInput.value = parsedObject.email,
+    //     getText.value = parsedObject.message
+        
+    // }else {
+    // getInput.value=parsedObject.email;
+    // getText.value= "";
+// }
+};
 
 setValue();
 
@@ -45,6 +51,7 @@ getForm.addEventListener(`submit`, (event)=>{
     console.log(parsedObject);
     localStorage.clear();    
     clearValue();
+
 
 });
 
