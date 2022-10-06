@@ -18,7 +18,7 @@ getText.addEventListener(`input`,throttle(onInput2,500));
 function onInput2(event){
     object.message=event.target.value;
     localStorage.setItem("feedback-form-state", JSON.stringify(object))
-    console.log(object);
+    // console.log(object);
 
 
 };
@@ -26,7 +26,7 @@ function onInput2(event){
 function onInput(event){
     object.email = event.target.value;
     localStorage.setItem("feedback-form-state", JSON.stringify(object))
-    console.log(object);
+    // console.log(object);
     
 };
 
