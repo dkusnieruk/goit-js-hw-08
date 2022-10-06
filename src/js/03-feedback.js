@@ -6,8 +6,7 @@ const getText = document.querySelector(`textarea`);
 
 const object = {
     email: ``,
-    message: `` 
-    
+    message: ``     
 };
 
 
@@ -20,7 +19,7 @@ function onInput2(event){
     object.message=event.target.value;
     localStorage.setItem("feedback-form-state", JSON.stringify(object))
     console.log(object);
-    
+
 
 };
 
@@ -31,8 +30,14 @@ function onInput(event){
     
 };
 
+
 const getObject = localStorage.getItem("feedback-form-state");
 const parsedObject = JSON.parse(getObject);
+
+if (localStorage.length > 0){
+    object.email = parsedObject.email;
+    object.message=parsedObject.message;
+}
 
 function setValue(){
     getInput.value = parsedObject.email !== undefined ? getInput.value= parsedObject.email : "";
